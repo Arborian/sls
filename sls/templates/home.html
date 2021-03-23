@@ -4,7 +4,10 @@
         <h1>Short-lived Secrets</h1>
 
         <h2>Create a secret</h2>
-        <form method="POST" action="{{url_for('post_secret', _external=True)}}">
+        <form
+            method="POST"
+            action="{{url_for('sls.post_secret', _external=True)}}"
+        >
             <label for="lifetime"> Lifetime (in seconds) </label>
             <br />
             <input name="lifetime" />
@@ -21,6 +24,6 @@
             <br />
             <input type="submit" value="Create Secret" />
         </form>
-        <a href="{{url_for('get_home', _external=True)}}">Back home</a>
+        <a href="{{url_for('sls.get_home', _external=True)}}">Back home</a>
     </body>
 </html>
